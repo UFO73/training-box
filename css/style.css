@@ -1,0 +1,29 @@
+.box {
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    outline: 3px solid black;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background-color: slategray;
+
+    border-radius: 25%;
+
+}
+
+.box-item {
+    width: 80px;
+    height: 80px;
+    outline: 1px solid black;
+
+    border-radius: 50%;
+    background-image: radial-gradient(
+    circle at center,
+    black 8%,
+    grey 50%);
+    
+    margin: 10px;
+}
