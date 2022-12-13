@@ -1,0 +1,18 @@
+.batton {
+    border: none;
+    padding: 0;
+
+    display: inline-block;
+
+    border-radius: 4px;
+    border: solid 2px black;
+    width: 168px;
+    height: 88px;
+
+    
+}
+
+.icon {
+
+}
+
