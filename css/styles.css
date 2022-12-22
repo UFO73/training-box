@@ -655,6 +655,7 @@ color: var(--logo-footer-white);
     height: 100%;
     background: rgba(46, 47, 66, 0.4);
     z-index: 100;
+    transition: opacity var(--transform), visibility var(--transform);
 }
 
 .backdrop.is-hidden {
