@@ -272,14 +272,20 @@
     fill: #9e9e9e;
 }
 
-.name-input:not(:placeholder-shown):required:valid {
+.name-input:not(:placeholder-shown):valid {
     border-color: rgb(0, 200, 0);
     box-shadow: 0 0 8px 0px rgba(0, 200, 0, 0.3);
 }
 
-.name-input:not(:placeholder-shown):required:invalid {
+.name-input:not(:placeholder-shown):invalid {
     border-color: rgb(200, 0, 0);
-   box-shadow: 0 0 8px 0px rgba(200, 0, 0, 0.3);
+    box-shadow: 0 0 8px 0px rgba(200, 0, 0, 0.3);
 }
 
+.name-input:not(:placeholder-shown):valid + .name-logo {
+    fill:rgb(0, 200, 0);
+}
 
+.name-input:not(:placeholder-shown):invalid+.name-logo {
+    fill: rgb(200, 0, 0);
+}
