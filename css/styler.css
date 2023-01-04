@@ -10,7 +10,7 @@
     --accent-footer-link: #31D0AA;
     --modal-window: #FCFCFC;
     --ocean-blue-accent: #404BBF;
-    --transit: 500ms linear;
+    --transit: 250ms linear;
 }
 
 * {
@@ -191,28 +191,7 @@
     animation-timing-function: linear;
 }
 
-@keyframes changeBg {
-    0% {
-        background-color: aqua;
-    }
 
-    25% {
-        background-color: blue;
-    }
-
-    50% {
-        background-color: blueviolet;
-    }
-
-    75% {
-        background-color: cornflowerblue;
-
-    }
-
-    100% {
-        background-color: turquoise;
-    }
-}
 
 /* ====FORM=== */
 
@@ -220,7 +199,41 @@
     margin: 0;
     text-align: center;
     margin-bottom: 10px;
+    color: #8E8F99;
 }
+
+.form-title:hover,
+.form-title:focus {
+    animation-name: changeBg;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes changeBg {
+    0% {
+        color: rgb(255, 68, 0);
+        transform: scale(1);
+        
+    }
+
+    50% {
+        color: rgb(255, 119, 0);
+        transform: scale(1.07);
+        
+    }
+
+    100% {
+        color: rgb(255, 204, 1);
+        transform: scale(1.15);
+        text-shadow: 2px 2px 4px #8E8F99;
+        
+    }
+
+}
+
+
 
 .container {
     width: 250px;
@@ -233,7 +246,7 @@
     border: 1px solid var(--primary-text-color);
     border-radius: 6px;
     padding: 20px;
-    box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #8E8F99;
 
 }
 
@@ -247,6 +260,7 @@
     padding: 5px 30px;
     margin-bottom: 8px;
     background-color: transparent;
+    transition: box-shadow var(--transit), border-color var(--transit);
 }
 
 .form-text {
@@ -265,27 +279,33 @@
 }
 
 .name-input::placeholder {
-    color: #9e9e9e;
+    color: #8E8F99;
 }
 
 .name-logo {
-    fill: #9e9e9e;
+    fill: #8E8F99;
+    transition: fill var(--transit);
 }
 
 .name-input:not(:placeholder-shown):valid {
     border-color: rgb(0, 200, 0);
     box-shadow: 0 0 8px 0px rgba(0, 200, 0, 0.3);
+    background-color: transparent;
 }
 
 .name-input:not(:placeholder-shown):invalid {
     border-color: rgb(200, 0, 0);
     box-shadow: 0 0 8px 0px rgba(200, 0, 0, 0.3);
+    background-color: transparent;
 }
 
 .name-input:not(:placeholder-shown):valid + .name-logo {
     fill:rgb(0, 200, 0);
+    background-color: transparent;
 }
 
-.name-input:not(:placeholder-shown):invalid+.name-logo {
+.name-input:not(:placeholder-shown):invalid + .name-logo {
     fill: rgb(200, 0, 0);
+    background-color: transparent;
 }
+
