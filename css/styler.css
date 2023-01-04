@@ -309,3 +309,45 @@
     background-color: transparent;
 }
 
+/* ===PULSE=== */
+
+.pulse-box {
+    width: 200px;
+    height: 200px;
+    /* background-color: #31D0AA; */
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pulse-btn {
+    font-family: sans-serif;
+    font-weight: 600;
+    color: black;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: pulse 1.5s infinite;
+    transition: transform var(--transit);
+    padding: 0;
+}
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+}
